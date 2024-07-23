@@ -1,0 +1,39 @@
+.footer {
+  max-height: 20rem;
+  padding-bottom: 2rem;
+  background-color: var(--color-grey-3);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    " logo . copy"
+    ". social .";
+
+  &__logo {
+    grid-area: logo;
+    height: 15rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    &-image {
+      height: 10rem;
+    }
+  }
+  &__social-media {
+    grid-area: social;
+    display: flex;
+    justify-content: center;
+  }
+  &__copyright {
+    grid-area: copy;
+    display: flex;
+    align-items: center;
+  }
+}
+/////////////////
+/// icons
+.fa-brands {
+  color: black;
+  font-size: 3rem;
+  margin-right: 2rem;
+}

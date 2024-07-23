@@ -1,0 +1,23 @@
+.heading {
+  color: var(--color-grey-5);
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.animate {
+  animation: skills-animation 2s;
+}
+//////////////////////////////
+//MARGIN TEXT
+.margin-medium {
+  margin: 4rem;
+}
+.margin-top-medium {
+  margin-top: 4rem;
+}
+.padding-medium {
+  padding: 4rem;
+}

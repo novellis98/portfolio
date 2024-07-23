@@ -1,0 +1,110 @@
+:root {
+  //BLUE COLORS
+  --color-blue-1: #e0ffff;
+  --color-blue-2: #87cefa;
+  --color-blue-3: #87ceeb;
+  --color-blue-4: #00bfff;
+  --color-blue-5: #1e90ff;
+
+  //ORANGE COLORS
+  --color-orange-1: #ffe6cc;
+  --color-orange-2: #ffb366;
+  --color-orange-3: #ff8000;
+  --color-orange-4: #e65c00;
+  --color-orange-5: #cc5200;
+
+  //GREEN COLORS
+  --color-green-1: #d3fcd5;
+  --color-green-2: #8cf08c;
+  --color-green-3: #27b841a7;
+  --color-green-4: #2c7a37;
+  --color-green-5: #1e4d22;
+
+  //GREY COLORS
+
+  --color-grey-1: #f5f5f5;
+  --color-grey-2: #dcdcdc;
+  --color-grey-3: #b0b0b0;
+  --color-grey-4: #6e6e6e;
+  --color-grey-5: #333333;
+
+  //LILLA COLORS
+  --color-lilla-1: #e6e6fa;
+  --color-lilla-2: #dda0dd;
+  --color-lilla-3: #f5e6e8;
+  --color-lilla-4: #e0b0ff;
+  --color-lilla-5: #e9d3ff;
+
+  //CREMA COLORS
+  --color-crema-1: #fff8dc;
+  --color-crema-2: #fdf5e6;
+  --color-crema-3: #fff5e1;
+  --color-crema-4: #faf3e0;
+  --color-crema-5: #fffacd;
+
+  //BEIGE COLORS
+  --color-beige-1: #f5f5dc;
+  --color-beige-2: #faf0e6;
+  --color-beige-3: #f0e68c;
+  --color-beige-4: #d2b48c;
+  --color-beige-5: #c2b280;
+
+  //#f5f5dc; crema
+  // #e0f2f1 verde menta chiaro
+  //#e6e6fa lavanda chiaro
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-grey-2);
+  font-size: 2rem;
+}
+footer {
+  margin: 0;
+  padding: 0;
+}
+figure {
+  margin: 0;
+}
+.btn-page-up {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-beige-4);
+  border: 2px solid var(--color-beige-1);
+  border-radius: 5px;
+  color: var(--color-beige-1);
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    border: 3px solid var(--color-beige-3);
+    color: var(--color-beige-3);
+  }
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  clip-path: circle(50%);
+  background-color: var(--color-beige-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    height: 0.4rem;
+    width: 80%;
+    background-color: var(--color-beige-1);
+    margin: 0.3rem 0;
+  }
+}

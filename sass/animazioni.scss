@@ -1,0 +1,30 @@
+@keyframes skills-animation {
+  0% {
+    transform: translateX(100rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+  80% {
+    transform: translateX(-3rem);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(1.05) translate(-50%, -50%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
