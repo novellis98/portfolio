@@ -155,7 +155,7 @@ btnPageUp.addEventListener("click", function () {
 
 //////////////////
 //HAMBURGER MENU
-// const hamburgerMenu = document.querySelector(".hamburger-menu");
-// hamburgerMenu.addEventListener("click", function () {
-//   navBar.style.display = "flex";
-// });
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+hamburgerMenu.addEventListener("click", function () {
+  navBar.style.display = "flex";
+});

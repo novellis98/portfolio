@@ -2,21 +2,21 @@
   box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 0.03);
 }
 @mixin media-query($breakpoint) {
-  //600px
+  //<600px
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
-  //900px
+  //<900px
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       @content;
     }
   }
-  //1200px
+  //<1199px
   @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 74.99em) {
       @content;
     }
   }
