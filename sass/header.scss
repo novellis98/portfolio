@@ -78,30 +78,30 @@
       }
     }
   }
-  // @include media-query(tab-land) {
-  //   &__background {
-  //     // position: fixed;
-  //     // transform: scale(100);
-  //     // background-color: red;
-  //     // top: 0;
-  //     // z-index: 100;
-  //   }
-  //   &__nav {
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     position: fixed;
-  //     transform: scale(30);
-  //     background-color: red;
-  //     top: 0;
-  //     left: 0;
-  //     z-index: 100;
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  //   &__menu {
-  //     display: flex;
-  //     flex-direction: column;
-  //   }
-  // }
+  @include media-query(tab-land) {
+    &__background {
+      // position: fixed;
+      // transform: scale(100);
+      // background-color: red;
+      // top: 0;
+      // z-index: 100;
+    }
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      transform: scale(30);
+      background-color: red;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+    }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
