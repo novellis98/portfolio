@@ -156,6 +156,10 @@ btnPageUp.addEventListener("click", function () {
 //////////////////
 //HAMBURGER MENU
 const hamburgerMenu = document.querySelector(".hamburger-menu");
+const background = document.querySelector(".background");
 hamburgerMenu.addEventListener("click", function () {
   navBar.style.display = "flex";
+
+  hamburgerMenu.classList.toggle("open");
+  background.classList.toggle("open");
 });
