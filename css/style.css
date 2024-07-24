@@ -115,18 +115,20 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 20rem 0; }
+      margin: 10rem 0; }
       .header__menu-items {
-        margin: 0; }
+        margin: 0;
+        border-bottom: 1px solid black; }
+        .header__menu-items:first-child {
+          border-top: 1px solid black; }
       .header__menu-links {
         text-align: center;
         width: 100vh;
         font-size: 5rem;
         margin: 0;
-        padding: 10rem 0;
-        border-bottom: 1px solid black; }
-        .header__menu-links:first-child {
-          border-top: 1px solid black; } }
+        padding: 10rem 0; }
+        .header__menu-links:hover {
+          transform: scale(1); } }
 
 .main {
   background-image: linear-gradient(to bottom, var(--color-grey-2), var(--color-beige-1) 70%); }
@@ -219,7 +221,7 @@
   padding-top: 5rem;
   padding-bottom: 10rem;
   background-color: var(--color-beige-1);
-  transition: all 1s; }
+  transition: all 0.4s; }
   .about_me.hidden {
     opacity: 0;
     transform: translateY(8rem); }
@@ -354,7 +356,7 @@ figure {
     background-image: linear-gradient(to right bottom, var(--color-grey-2), var(--color-grey-3));
     clip-path: circle(50%);
     z-index: 10;
-    transition: all 1s; }
+    transition: all 0.4s; }
     .background.open {
       transform: scale(80); }
   .hamburger-menu {
