@@ -83,7 +83,7 @@
     display: flex;
     justify-content: center;
     margin-top: -4rem;
-    margin-left: -10rem;
+    margin-left: 0rem;
     transition: all 0.4s; }
     @media only screen and (min-width: 75em) {
       .header__nav.sticky {
@@ -92,7 +92,7 @@
         width: 100%;
         position: fixed;
         top: 4rem;
-        left: 0; } }
+        left: 0rem; } }
   .header__menu {
     width: 50%;
     display: flex;
