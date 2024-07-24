@@ -73,7 +73,7 @@
       margin-top: auto; }
       @media only screen and (max-width: 62.5em) {
         .header__author-photo {
-          width: 5rem; } }
+          width: 6rem; } }
     .header__author-name {
       display: inline-block;
       text-transform: uppercase;
@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     margin-top: -4rem;
+    margin-left: -10rem;
     transition: all 0.4s; }
     @media only screen and (min-width: 75em) {
       .header__nav.sticky {
@@ -93,7 +94,7 @@
         top: 4rem;
         left: 0; } }
   .header__menu {
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: space-around; }
     .header__menu-items {
@@ -166,11 +167,11 @@
     .introduction {
       margin: 8rem 5rem; } }
   .introduction__text {
-    line-height: 5rem;
+    line-height: 6rem;
     text-align: justify; }
-    .introduction__text-h3, .introduction__text-h6 {
+    .introduction__text-h3, .introduction__text-h4 {
       text-align: center;
-      line-height: 1rem; }
+      line-height: 3rem; }
 
 .skills__container {
   margin: 10rem;
@@ -237,10 +238,10 @@
   @media only screen and (max-width: 62.5em) {
     .projects {
       grid-template-columns: repeat(1, 1fr);
-      margin: 5rem 15rem; } }
+      margin: 5rem 10rem; } }
   @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
     .projects {
-      margin: 5rem 10rem; } }
+      margin: 5rem 5rem; } }
   .projects__container {
     position: relative;
     padding: 1rem;
@@ -294,7 +295,8 @@
     padding: 5rem 25rem;
     display: flex;
     clip-path: polygon(0% 100%, 10% 0, 100% 0, 90% 100%);
-    background-color: var(--color-beige-4); }
+    background-color: var(--color-beige-4);
+    font-size: 2.5rem; }
     @media only screen and (max-width: 74.99em) {
       .about_me__container {
         flex-direction: column; } }
@@ -410,7 +412,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--color-grey-2);
-  font-size: 2rem;
+  font-size: 2.2rem;
   box-sizing: border-box; }
   body.no-scroll {
     overflow: hidden; }

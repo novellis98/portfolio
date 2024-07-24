@@ -26,12 +26,12 @@
     margin: 8rem 5rem;
   }
   &__text {
-    line-height: 5rem;
+    line-height: 6rem;
     text-align: justify;
     &-h3,
-    &-h6 {
+    &-h4 {
       text-align: center;
-      line-height: 1rem;
+      line-height: 3rem;
     }
   }
 }
@@ -118,10 +118,10 @@
   }
   @include media-query(tab-port) {
     grid-template-columns: repeat(1, 1fr);
-    margin: 5rem 15rem;
+    margin: 5rem 10rem;
   }
   @include media-query(phone) {
-    margin: 5rem 10rem;
+    margin: 5rem 5rem;
   }
   &__container {
     position: relative;
@@ -190,6 +190,7 @@
     display: flex;
     clip-path: polygon(0% 100%, 10% 0, 100% 0, 90% 100%);
     background-color: var(--color-beige-4);
+    font-size: 2.5rem;
     @include media-query(tab-land) {
       flex-direction: column;
     }

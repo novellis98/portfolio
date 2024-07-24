@@ -2,6 +2,7 @@
 //sticky header nav when header ends
 const header = document.querySelector(".header");
 const navBar = document.querySelector(".header__nav");
+const navBarLinks = document.querySelectorAll(".header__menu-links");
 const navBarHeight = navBar.getBoundingClientRect().height;
 const fixHeader = function (entries, observer) {
   const [entry] = entries;
@@ -186,3 +187,14 @@ const revealHamburgerIcon = new IntersectionObserver(
   }
 );
 revealHamburgerIcon.observe(header);
+
+///////////////////////
+//REMOVE BACKGROUND WHEN LINKS ARE CLICKED
+
+if (navBar.classList.contains("open")) {
+  navBarLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      background.classList.remove("open");
+    });
+  });
+}

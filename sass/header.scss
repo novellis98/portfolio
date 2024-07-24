@@ -36,7 +36,7 @@
       clip-path: circle(40% at 50% 45%);
       margin-top: auto;
       @include media-query(tab-port) {
-        width: 5rem;
+        width: 6rem;
       }
     }
     &-name {
@@ -50,6 +50,7 @@
     display: flex;
     justify-content: center;
     margin-top: -4rem;
+    margin-left: -10rem;
     transition: all 0.4s;
     @include media-query(big-desktop) {
       &.sticky {
@@ -63,7 +64,7 @@
     }
   }
   &__menu {
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
 

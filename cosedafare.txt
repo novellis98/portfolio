@@ -1,3 +1,2 @@
-migliorare menu hamburger, è brutto;
 migliorare menu hamburger perche si vede male su tutti i dispositivi;
 quando si clicca sul link menu hamburgher bisogna togliere il background;
