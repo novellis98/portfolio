@@ -97,8 +97,13 @@ figure {
     left: 5.5rem;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: green;
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-grey-2),
+      var(--color-grey-3)
+    );
     clip-path: circle(50%);
+    z-index: 10;
     transition: all 1s;
     &.open {
       transform: scale(80);

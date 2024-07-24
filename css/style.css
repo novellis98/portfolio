@@ -113,11 +113,20 @@
     .header__menu {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
-      margin: 20rem auto; }
+      margin: 20rem 0; }
+      .header__menu-items {
+        margin: 0; }
       .header__menu-links {
-        font-size: 5rem; } }
+        text-align: center;
+        width: 100vh;
+        font-size: 5rem;
+        margin: 0;
+        padding: 10rem 0;
+        border-bottom: 1px solid black; }
+        .header__menu-links:first-child {
+          border-top: 1px solid black; } }
 
 .main {
   background-image: linear-gradient(to bottom, var(--color-grey-2), var(--color-beige-1) 70%); }
@@ -342,8 +351,9 @@ figure {
     left: 5.5rem;
     height: 5.5rem;
     width: 5.5rem;
-    background-color: green;
+    background-image: linear-gradient(to right bottom, var(--color-grey-2), var(--color-grey-3));
     clip-path: circle(50%);
+    z-index: 10;
     transition: all 1s; }
     .background.open {
       transform: scale(80); }

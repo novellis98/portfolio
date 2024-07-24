@@ -159,9 +159,9 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const background = document.querySelector(".background");
 hamburgerMenu.addEventListener("click", function () {
   if (navBar.style.display === "none" || navBar.style.display === "") {
-    navBar.style.display = "flex"; // Mostra il nav-bar
+    navBar.style.display = "flex";
   } else {
-    navBar.style.display = "none"; // Nascondi il nav-bar
+    navBar.style.display = "none";
   }
 
   hamburgerMenu.classList.toggle("open");
