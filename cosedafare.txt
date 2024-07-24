@@ -1,2 +1,0 @@
-
-quando si clicca sul link menu hamburgher bisogna togliere il background;
