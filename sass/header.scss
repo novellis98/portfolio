@@ -9,6 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
+  position: relative;
 
   &__logo {
     display: flex;
@@ -47,19 +48,22 @@
   }
   &__nav {
     flex-basis: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
     margin-top: -4rem;
-    margin-left: 0rem;
+    padding-left: 15rem;
     transition: all 0.4s;
+
     @include media-query(big-desktop) {
       &.sticky {
         background-color: rgba(200, 200, 200, 0.9);
         z-index: 100;
         width: 100%;
         position: fixed;
-        top: 4rem;
+        top: 0rem;
         left: 0rem;
+        margin-top: 0;
+        padding-left: 15rem;
       }
     }
   }

@@ -48,7 +48,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  position: relative; }
   .header__logo {
     display: flex;
     margin-left: 10rem;
@@ -80,10 +81,10 @@
       margin: 0 3rem; }
   .header__nav {
     flex-basis: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
     margin-top: -4rem;
-    margin-left: 0rem;
+    padding-left: 15rem;
     transition: all 0.4s; }
     @media only screen and (min-width: 75em) {
       .header__nav.sticky {
@@ -91,8 +92,10 @@
         z-index: 100;
         width: 100%;
         position: fixed;
-        top: 4rem;
-        left: 0rem; } }
+        top: 0rem;
+        left: 0rem;
+        margin-top: 0;
+        padding-left: 15rem; } }
   .header__menu {
     width: 50%;
     display: flex;
@@ -150,13 +153,13 @@
   background-image: linear-gradient(to bottom, var(--color-grey-2), var(--color-beige-1) 50%); }
 
 .introduction {
-  margin: 10rem 40rem;
+  margin: 10rem 35rem;
   font-family: "Josefin Slab", serif;
   font-size: 3.5rem;
   font-weight: 500; }
   @media only screen and (max-width: 74.99em) {
     .introduction {
-      margin: 10rem 35rem; } }
+      margin: 10rem 25rem; } }
   @media only screen and (max-width: 62.5em) {
     .introduction {
       margin: 10rem 20rem; } }

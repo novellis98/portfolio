@@ -9,12 +9,12 @@
 /// INTRODUCTION
 
 .introduction {
-  margin: 10rem 40rem;
+  margin: 10rem 35rem;
   font-family: "Josefin Slab", serif;
   font-size: 3.5rem;
   font-weight: 500;
   @include media-query(tab-land) {
-    margin: 10rem 35rem;
+    margin: 10rem 25rem;
   }
   @include media-query(tab-port) {
     margin: 10rem 20rem;
