@@ -4,13 +4,13 @@
 @mixin media-query($breakpoint) {
   //<600px
   @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
       @content;
     }
   }
   //<900px
   @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 56.25em) {
       @content;
     }
   }

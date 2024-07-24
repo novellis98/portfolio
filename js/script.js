@@ -158,27 +158,25 @@ btnPageUp.addEventListener("click", function () {
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const background = document.querySelector(".background");
 hamburgerMenu.addEventListener("click", function () {
-  if (navBar.style.display === "none" || navBar.style.display === "") {
-    navBar.style.display = "flex";
-  } else {
-    navBar.style.display = "none";
-  }
-
+  navBar.classList.toggle("open");
   hamburgerMenu.classList.toggle("open");
   background.classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
 });
 /// show hamburger's icon & scroll button to header when header ends
 const revealHamburgerIcon = new IntersectionObserver(
   function (entries, observe) {
     const [entry] = entries;
-    if (!entry.isIntersecting) {
-      hamburgerMenu.style.display = "flex";
-      background.style.display = "block";
-      btnPageUp.style.display = "block";
-    } else {
-      hamburgerMenu.style.display = "none";
-      background.style.display = "none";
-      btnPageUp.style.display = "none";
+    if (!navBar.classList.contains("open")) {
+      if (!entry.isIntersecting) {
+        hamburgerMenu.style.display = "flex";
+        background.style.display = "block";
+        btnPageUp.style.display = "block";
+      } else {
+        hamburgerMenu.style.display = "none";
+        background.style.display = "none";
+        btnPageUp.style.display = "none";
+      }
     }
   },
   {

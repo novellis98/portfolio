@@ -65,6 +65,9 @@ body {
   background-color: var(--color-grey-2);
   font-size: 2rem;
   box-sizing: border-box;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 footer {
   margin: 0;
@@ -75,7 +78,7 @@ figure {
 }
 .btn-page-up {
   padding: 1.5rem 2rem;
-  background-color: var(--color-beige-4);
+  background-color: var(--color-beige-5);
   border: 2px solid var(--color-beige-1);
   border-radius: 5px;
   color: var(--color-beige-1);
@@ -88,6 +91,10 @@ figure {
   &:hover {
     border: 3px solid var(--color-beige-3);
     color: var(--color-beige-3);
+    @include media-query(tab-port) {
+      border: 2px solid var(--color-beige-1);
+      color: var(--color-beige-1);
+    }
   }
 }
 .hamburger-menu {
@@ -109,7 +116,7 @@ figure {
     z-index: 10;
     transition: all 0.4s;
     &.open {
-      transform: scale(80);
+      transform: scale(60);
     }
   }
   .hamburger-menu {
@@ -146,6 +153,7 @@ figure {
         background-color: var(--color-beige-1);
         transition: all 0.4s;
       }
+
       &::after {
         position: absolute;
         top: 0;
