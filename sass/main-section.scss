@@ -5,7 +5,36 @@
     var(--color-beige-1) 50%
   );
 }
+////////////////////////
+/// INTRODUCTION
 
+.introduction {
+  margin: 10rem 40rem;
+  font-family: "Josefin Slab", serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  @include media-query(tab-land) {
+    margin: 10rem 35rem;
+  }
+  @include media-query(tab-port) {
+    margin: 10rem 20rem;
+  }
+  @include media-query(tab-small) {
+    margin: 10rem 10rem;
+  }
+  @include media-query(phone) {
+    margin: 8rem 5rem;
+  }
+  &__text {
+    line-height: 5rem;
+    text-align: justify;
+    &-h3,
+    &-h6 {
+      text-align: center;
+      line-height: 1rem;
+    }
+  }
+}
 //////////////////////////
 /// SKILLS
 .skills {
@@ -84,8 +113,14 @@
   display: grid;
   gap: 10rem;
   grid-template-columns: repeat(4, 1fr);
+  @include media-query(tab-land) {
+    margin: 5rem 10rem;
+  }
   @include media-query(tab-port) {
     grid-template-columns: repeat(1, 1fr);
+    margin: 5rem 15rem;
+  }
+  @include media-query(phone) {
     margin: 5rem 10rem;
   }
   &__container {
