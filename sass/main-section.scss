@@ -20,31 +20,34 @@
       opacity: 0;
       visibility: hidden;
       &:nth-child(1) {
-        animation: skills-animation 2s 2s forwards;
+        animation: skills-animation 1s 1s forwards;
       }
       &:nth-child(2) {
-        animation: skills-animation 2s 3s forwards;
+        animation: skills-animation 1s 1.5s forwards;
       }
       &:nth-child(3) {
-        animation: skills-animation 2s 4s forwards;
+        animation: skills-animation 1s 2s forwards;
       }
       &:nth-child(4) {
-        animation: skills-animation 2s 5s forwards;
+        animation: skills-animation 1s 2.5s forwards;
       }
       &:nth-child(5) {
-        animation: skills-animation 2s 6s forwards;
+        animation: skills-animation 1s 3s forwards;
       }
       &:nth-child(6) {
-        animation: skills-animation 2s 7s forwards;
+        animation: skills-animation 1s 3.5s forwards;
       }
       &:nth-child(7) {
-        animation: skills-animation 2s 8s forwards;
+        animation: skills-animation 1s 4s forwards;
       }
       &:nth-child(8) {
-        animation: skills-animation 2s 9s forwards;
+        animation: skills-animation 1s 4.5s forwards;
       }
       &-photo {
         height: 8rem;
+        @include media-query(phone) {
+          height: 6rem;
+        }
       }
       &-description {
         margin-top: 2rem;
@@ -60,6 +63,16 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
     }
+    @include media-query(tab-port) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    @include media-query(phone) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 2fr;
+      gap: 8rem;
+      margin: 5rem 0 0 0;
+    }
   }
 }
 
@@ -71,7 +84,10 @@
   display: grid;
   gap: 10rem;
   grid-template-columns: repeat(4, 1fr);
-
+  @include media-query(tab-port) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5rem 10rem;
+  }
   &__container {
     position: relative;
     padding: 1rem;
@@ -136,6 +152,16 @@
     display: flex;
     clip-path: polygon(0% 100%, 10% 0, 100% 0, 90% 100%);
     background-color: var(--color-beige-4);
+    @include media-query(tab-land) {
+      flex-direction: column;
+    }
+    @include media-query(tab-port) {
+      padding: 5rem 15rem;
+    }
+    @include media-query(phone) {
+      padding: 5rem 5rem;
+      clip-path: none;
+    }
     &-left {
       display: flex;
       flex-direction: column;

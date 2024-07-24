@@ -1,1 +1,3 @@
-da togliere il bottone sotto a destra quando si apre il menu da tel.
+migliorare menu hamburger, è brutto;
+migliorare menu hamburger perche si vede male su tutti i dispositivi;
+quando si clicca sul link menu hamburgher bisogna togliere il background;

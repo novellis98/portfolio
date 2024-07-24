@@ -14,9 +14,16 @@
     display: flex;
     margin-left: 10rem;
     align-items: center;
+    @include media-query(tab-port) {
+      margin-left: 1rem;
+    }
     &-photo {
       height: 10rem;
       width: 10rem;
+      @include media-query(tab-port) {
+        height: 7rem;
+        width: 7rem;
+      }
     }
   }
   &__author {
@@ -27,7 +34,10 @@
     &-photo {
       width: 8rem;
       clip-path: circle(40% at 50% 45%);
-      margin-top: 2rem;
+      margin-top: auto;
+      @include media-query(tab-port) {
+        width: 5rem;
+      }
     }
     &-name {
       display: inline-block;

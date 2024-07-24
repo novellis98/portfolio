@@ -1,5 +1,6 @@
 .footer {
-  max-height: 20rem;
+  box-sizing: border-box;
+  height: 15rem;
   padding-bottom: 2rem;
   background-color: var(--color-grey-3);
   display: grid;
@@ -11,12 +12,18 @@
 
   &__logo {
     grid-area: logo;
-    height: 15rem;
+    height: 10rem;
     display: flex;
     justify-content: right;
     align-items: center;
     &-image {
-      height: 10rem;
+      height: 8rem;
+      @include media-query(tab-land) {
+        height: 7rem;
+      }
+      @include media-query(tab-port) {
+        height: 6rem;
+      }
     }
   }
   &__social-media {
@@ -25,9 +32,12 @@
     justify-content: center;
   }
   &__copyright {
+    font-size: 1.5rem;
     grid-area: copy;
     display: flex;
     align-items: center;
+    justify-content: baseline;
+    margin-right: 5rem;
   }
 }
 /////////////////

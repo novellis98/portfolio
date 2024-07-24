@@ -167,3 +167,23 @@ hamburgerMenu.addEventListener("click", function () {
   hamburgerMenu.classList.toggle("open");
   background.classList.toggle("open");
 });
+/// show hamburger's icon & scroll button to header when header ends
+const revealHamburgerIcon = new IntersectionObserver(
+  function (entries, observe) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) {
+      hamburgerMenu.style.display = "flex";
+      background.style.display = "block";
+      btnPageUp.style.display = "block";
+    } else {
+      hamburgerMenu.style.display = "none";
+      background.style.display = "none";
+      btnPageUp.style.display = "none";
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+);
+revealHamburgerIcon.observe(header);

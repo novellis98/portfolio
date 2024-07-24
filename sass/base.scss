@@ -48,20 +48,23 @@
   --color-beige-3: #f0e68c;
   --color-beige-4: #d2b48c;
   --color-beige-5: #c2b280;
-
-  //#f5f5dc; crema
-  // #e0f2f1 verde menta chiaro
-  //#e6e6fa lavanda chiaro
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //1rem is 10px
+  @include media-query(tab-port) {
+    font-size: 56.25%; //1rem is 9px
+  }
+  @include media-query(phone) {
+    font-size: 50%; //1rem is 8px
+  }
 }
 body {
   margin: 0;
   padding: 0;
   background-color: var(--color-grey-2);
   font-size: 2rem;
+  box-sizing: border-box;
 }
 footer {
   margin: 0;
