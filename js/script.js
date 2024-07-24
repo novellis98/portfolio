@@ -1,9 +1,20 @@
 ////////////////////////
-//sticky header nav when header ends
+//variables
 const header = document.querySelector(".header");
 const navBar = document.querySelector(".header__nav");
 const navBarLinks = document.querySelectorAll(".header__menu-links");
 const navBarHeight = navBar.getBoundingClientRect().height;
+const linkHome = document.querySelector("#home");
+const linkProjects = document.querySelector("#projects");
+const linkAboutMe = document.querySelector("#about_me");
+const linkContacts = document.querySelector("#contacts");
+const sectionProjects = document.querySelector(".projects-box");
+const contacts = document.querySelector(".footer__social-media");
+const sectionAboutMe = document.querySelector(".about_me");
+const btnPageUp = document.querySelector(".btn-page-up");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const background = document.querySelector(".background");
+//sticky header nav when header ends
 const fixHeader = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
@@ -75,7 +86,6 @@ const richiesta = fetch(requestUrl)
 ///////////////
 //REVEAL SECTION ABOUT ME when the about me's section -
 //is intersecting in the viewport
-const sectionAboutMe = document.querySelector(".about_me");
 const revealSection = function (entries, observer) {
   sectionAboutMe.classList.add("hidden");
   const [entry] = entries;
@@ -92,12 +102,6 @@ obsAbout.observe(sectionAboutMe);
 
 //////////////////////////
 //HEADER NAV LINKS SCROLLING TO SECTIONS
-const linkHome = document.querySelector("#home");
-const linkProjects = document.querySelector("#projects");
-const linkAboutMe = document.querySelector("#about_me");
-const linkContacts = document.querySelector("#contacts");
-const sectionProjects = document.querySelector(".projects-box");
-const contacts = document.querySelector(".footer__social-media");
 
 //link home scroll
 linkHome.addEventListener("click", function (e) {
@@ -143,7 +147,6 @@ linkContacts.addEventListener("click", function (e) {
 /////////////////////
 //BUTTON SCROLL
 //button to scroll to header
-const btnPageUp = document.querySelector(".btn-page-up");
 btnPageUp.addEventListener("click", function () {
   const headerCoords = header.getClientRects();
 
@@ -156,8 +159,6 @@ btnPageUp.addEventListener("click", function () {
 
 //////////////////
 //HAMBURGER MENU
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-const background = document.querySelector(".background");
 hamburgerMenu.addEventListener("click", function () {
   navBar.classList.toggle("open");
   hamburgerMenu.classList.toggle("open");
@@ -190,11 +191,10 @@ revealHamburgerIcon.observe(header);
 
 ///////////////////////
 //REMOVE BACKGROUND WHEN LINKS ARE CLICKED
-
-if (navBar.classList.contains("open")) {
-  navBarLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      background.classList.remove("open");
-    });
-  });
-}
+navBarLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    background.classList.toggle("open");
+    navBar.classList.toggle("open");
+    hamburgerMenu.classList.toggle("open");
+  })
+);

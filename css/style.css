@@ -120,31 +120,37 @@
     .header__nav {
       display: none;
       position: fixed;
-      top: 4rem;
+      top: 0;
       left: 0;
       z-index: 100;
-      height: 100%;
-      width: 100%; }
+      height: 100vh;
+      width: 100vw;
+      padding: 0;
+      margin: 0; }
       .header__nav.open {
         display: flex; }
     .header__menu {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 10rem 0; }
+      margin: auto;
+      width: 80%;
+      padding: 0;
+      border: 1px solid var(--color-beige-5); }
       .header__menu-items {
-        margin: 0;
-        border-bottom: 1px solid var(--color-beige-5); }
-        .header__menu-items:first-child {
-          border-top: 1px solid var(--color-beige-5); }
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0; }
+        .header__menu-items:not(:last-child) {
+          border-bottom: 1px solid var(--color-beige-5); }
       .header__menu-links {
         text-align: center;
-        width: 100vh;
-        font-size: 5rem;
-        margin: 0;
-        padding: 10rem 0;
-        color: var(--color-beige-5); }
+        width: 100%;
+        font-size: 3rem;
+        padding: 5rem;
+        color: var(--color-beige-5);
+        box-shadow: 0 0 0 0; }
         .header__menu-links:hover {
           transform: scale(1);
           background-color: var(--color-beige-1); } }
