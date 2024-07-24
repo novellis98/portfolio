@@ -163,7 +163,12 @@ hamburgerMenu.addEventListener("click", function () {
   navBar.classList.toggle("open");
   hamburgerMenu.classList.toggle("open");
   background.classList.toggle("open");
-  document.body.classList.toggle("no-scroll");
+  document.body.classList.add("no-scroll");
+  if (navBarLinks || hamburgerMenu & hamburgerMenu.classList.contains("open")) {
+    addEventListener("click", function () {
+      document.body.classList.remove("no-scroll");
+    });
+  }
 });
 /// show hamburger's icon & scroll button to header when header ends
 const revealHamburgerIcon = new IntersectionObserver(
