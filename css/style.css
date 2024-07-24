@@ -60,8 +60,8 @@
       width: 10rem; }
       @media only screen and (pointer: coarse) and (hover: none) and (max-width: 56.25em) {
         .header__logo-photo {
-          height: 7rem;
-          width: 7rem; } }
+          height: 6rem;
+          width: 6rem; } }
   .header__author {
     display: flex;
     justify-content: right;
@@ -145,7 +145,7 @@
           background-color: var(--color-beige-1); } }
 
 .main {
-  background-image: linear-gradient(to bottom, var(--color-grey-2), var(--color-beige-1) 70%); }
+  background-image: linear-gradient(to bottom, var(--color-grey-2), var(--color-beige-1) 50%); }
 
 .skills__container {
   margin: 10rem;
@@ -311,13 +311,13 @@
           height: 7rem; } }
       @media only screen and (pointer: coarse) and (hover: none) and (max-width: 56.25em) {
         .footer__logo-image {
-          height: 6rem; } }
+          height: 5rem; } }
   .footer__social-media {
     grid-area: social;
     display: flex;
     justify-content: center; }
   .footer__copyright {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     grid-area: copy;
     display: flex;
     align-items: center;

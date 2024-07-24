@@ -168,6 +168,7 @@ const revealHamburgerIcon = new IntersectionObserver(
   function (entries, observe) {
     const [entry] = entries;
     if (!navBar.classList.contains("open")) {
+      //do this things only when the navBar is closed
       if (!entry.isIntersecting) {
         hamburgerMenu.style.display = "flex";
         background.style.display = "block";
