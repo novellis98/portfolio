@@ -35,10 +35,12 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-const richiesta = fetch("./progetti.json")
+
+const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
   .then((Response) => Response.json())
-  .then((data) => {
-    data.forEach((project) => {
+  .then((project) => {
+    console.log(project[0]);
+    [project].forEach((project) => {
       const markup = `<figure class="projects__container">
             <img
               src="${project.screenshot}"
