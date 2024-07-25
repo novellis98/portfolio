@@ -35,7 +35,8 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-const richiesta = fetch("./progetti.json")
+const requestUrl = "https://db-portfolio-rj6m.onrender.com";
+const richiesta = fetch(requestUrl)
   .then((Response) => Response.json())
   .then((data) => {
     data.forEach((project) => {
