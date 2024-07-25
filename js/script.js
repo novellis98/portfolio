@@ -1,5 +1,6 @@
 ////////////////////////
 //variables
+
 const header = document.querySelector(".header");
 const navBar = document.querySelector(".header__nav");
 const navBarLinks = document.querySelectorAll(".header__menu-links");
@@ -34,8 +35,7 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-const requestUrl = "./progetti.json";
-const richiesta = fetch(requestUrl)
+const richiesta = fetch("./progetti.json")
   .then((Response) => Response.json())
   .then((data) => {
     data.forEach((project) => {
@@ -78,10 +78,10 @@ const richiesta = fetch(requestUrl)
     if (projects.length % 2 == !0) {
       projects[projects.length - 1].classList.add("odd-items");
     }
-  })
-  .catch((error) => {
-    console.error("errore");
   });
+// .catch((error) => {
+//   console.error("errore");
+// });
 
 ///////////////
 //REVEAL SECTION ABOUT ME when the about me's section -
