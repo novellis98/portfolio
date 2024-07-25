@@ -79,10 +79,10 @@ const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
     if (projects.length % 2 == !0) {
       projects[projects.length - 1].classList.add("odd-items");
     }
+  })
+  .catch((error) => {
+    console.error("errore");
   });
-// .catch((error) => {
-//   console.error("errore");
-// });
 
 ///////////////
 //REVEAL SECTION ABOUT ME when the about me's section -
