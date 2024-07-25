@@ -35,7 +35,8 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-const requestUrl = "https://db-portfolio-rj6m.onrender.com";
+const requestUrl = "./progetti.json";
+
 const richiesta = fetch(requestUrl)
   .then((Response) => Response.json())
   .then((data) => {
@@ -79,10 +80,10 @@ const richiesta = fetch(requestUrl)
     if (projects.length % 2 == !0) {
       projects[projects.length - 1].classList.add("odd-items");
     }
+  })
+  .catch((error) => {
+    console.error("errore");
   });
-// .catch((error) => {
-//   console.error("errore");
-// });
 
 ///////////////
 //REVEAL SECTION ABOUT ME when the about me's section -
@@ -204,3 +205,7 @@ navBarLinks.forEach((link) =>
     hamburgerMenu.classList.toggle("open");
   })
 );
+
+fetch("https://dragonball-api.com/api/characters/1")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
