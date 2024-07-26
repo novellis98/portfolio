@@ -1,0 +1,48 @@
+.about_me {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  background-color: var(--color-beige-1);
+  transition: all 0.4s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+
+  &__container {
+    padding: 5rem 25rem;
+    display: flex;
+    clip-path: polygon(0% 100%, 10% 0, 100% 0, 90% 100%);
+    background-color: var(--color-beige-4);
+    font-size: 2.5rem;
+    @include media-query(tab-land) {
+      flex-direction: column;
+    }
+    @include media-query(tab-port) {
+      padding: 5rem 15rem;
+    }
+    @include media-query(phone) {
+      padding: 5rem 5rem;
+      clip-path: none;
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 30%;
+
+      &-author-photo {
+        clip-path: circle(45% at 50% 50%);
+        height: 15rem;
+      }
+      &-author-name {
+        text-transform: uppercase;
+      }
+    }
+    &-right {
+      text-align: justify;
+      flex: 1;
+    }
+  }
+}
