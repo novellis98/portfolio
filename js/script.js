@@ -172,19 +172,15 @@ hamburgerMenu.addEventListener("click", function () {
     });
   }
 });
-/// show hamburger's icon & scroll button to header when header ends
+/// show scroll button to header when header ends
 const revealHamburgerIcon = new IntersectionObserver(
   function (entries, observe) {
     const [entry] = entries;
     if (!navBar.classList.contains("open")) {
       //do this things only when the navBar is closed
       if (!entry.isIntersecting) {
-        hamburgerMenu.style.display = "flex";
-        background.style.display = "block";
         btnPageUp.style.display = "block";
       } else {
-        hamburgerMenu.style.display = "none";
-        background.style.display = "none";
         btnPageUp.style.display = "none";
       }
     }

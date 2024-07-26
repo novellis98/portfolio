@@ -5,7 +5,7 @@
     var(--color-grey-4)
   );
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
@@ -47,12 +47,12 @@
     }
   }
   &__nav {
-    flex-basis: 100%;
-    width: 100%;
-    display: flex;
-    margin-top: -4rem;
-    padding-left: 15rem;
-    transition: all 0.4s;
+    // flex-basis: 100%;
+    // width: 100%;
+    // display: flex;
+    // margin-top: -4rem;
+    // padding-left: 15rem;
+    // transition: all 0.4s;
 
     @include media-query(big-desktop) {
       &.sticky {
@@ -143,64 +143,63 @@
   }
 }
 .hamburger-menu {
-  display: none;
+  //display: none;
 }
-@include media-query(tab-land) {
-  .hamburger-menu {
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem;
-    clip-path: circle(50%);
-    background-color: var(--color-beige-5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+//@include media-query(tab-land) {
+.hamburger-menu {
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background-color: var(--color-beige-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-    &__item {
+  &__item {
+    height: 0.3rem;
+    width: 80%;
+    background-color: var(--color-beige-1);
+    position: relative;
+    transition: all 0.4s;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      margin-top: -1rem;
+      width: 100%;
       height: 0.3rem;
-      width: 80%;
       background-color: var(--color-beige-1);
-      position: relative;
       transition: all 0.4s;
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        margin-top: -1rem;
-        width: 100%;
-        height: 0.3rem;
-        background-color: var(--color-beige-1);
-        transition: all 0.4s;
-      }
-
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        margin-top: 1rem;
-        width: 100%;
-        height: 0.3rem;
-        background-color: var(--color-beige-1);
-        transition: all 0.4s;
-      }
     }
-    &.open {
-      .hamburger-menu__item {
-        background-color: transparent;
-        &::before {
-          margin-top: 0;
-          transform: rotate(135deg);
-        }
-        &::after {
-          margin-top: 0;
-          transform: rotate(-135deg);
-        }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      margin-top: 1rem;
+      width: 100%;
+      height: 0.3rem;
+      background-color: var(--color-beige-1);
+      transition: all 0.4s;
+    }
+  }
+  &.open {
+    .hamburger-menu__item {
+      background-color: transparent;
+      &::before {
+        margin-top: 0;
+        transform: rotate(135deg);
+      }
+      &::after {
+        margin-top: 0;
+        transform: rotate(-135deg);
       }
     }
   }
 }
+//}
