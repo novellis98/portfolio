@@ -24,6 +24,7 @@
   }
   @include media-query(phone) {
     margin: 8rem 5rem;
+    font-size: 3rem;
   }
   &__text {
     line-height: 6rem;

@@ -36,6 +36,14 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    @include media-query(phone) {
+      margin-left: 6rem;
+      font-size: 2rem;
+    }
+    @include media-query(phone-small) {
+      margin-left: auto;
+      font-size: 2rem;
+    }
 
     &-photo {
       width: 8rem;

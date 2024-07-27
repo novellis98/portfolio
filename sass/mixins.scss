@@ -2,6 +2,12 @@
   box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 0.03);
 }
 @mixin media-query($breakpoint) {
+  //<350px
+  @if $breakpoint == phone-small {
+    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 22.43em) {
+      @content;
+    }
+  }
   //<600px
   @if $breakpoint == phone {
     @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {

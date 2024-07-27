@@ -73,6 +73,14 @@
     display: flex;
     justify-content: right;
     align-items: center; }
+    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
+      .header__author {
+        margin-left: 6rem;
+        font-size: 2rem; } }
+    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 22.43em) {
+      .header__author {
+        margin-left: auto;
+        font-size: 2rem; } }
     .header__author-photo {
       width: 8rem;
       clip-path: circle(40% at 50% 45%);
@@ -236,7 +244,8 @@
       margin: 10rem 10rem; } }
   @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
     .introduction {
-      margin: 8rem 5rem; } }
+      margin: 8rem 5rem;
+      font-size: 3rem; } }
   .introduction__text {
     line-height: 6rem; }
     .introduction__text-h3, .introduction__text-h4 {
@@ -486,6 +495,9 @@ html {
   @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media only screen and (pointer: coarse) and (hover: none) and (max-width: 22.43em) {
+    html {
+      font-size: 37.5%; } }
 
 body {
   margin: 0;

@@ -61,6 +61,9 @@ html {
   @include media-query(phone) {
     font-size: 50%; //1rem is 8px
   }
+  @include media-query(phone-small) {
+    font-size: 37.5%; //1rem is 6px
+  }
 }
 body {
   margin: 0;
