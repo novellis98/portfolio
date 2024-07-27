@@ -17,10 +17,7 @@
     justify-content: right;
     align-items: center;
     &-image {
-      height: 8rem;
-      @include media-query(tab-land) {
-        height: 7rem;
-      }
+      height: 6rem;
       @include media-query(tab-port) {
         height: 5rem;
       }

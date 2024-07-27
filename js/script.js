@@ -27,7 +27,7 @@ const fixHeader = function (entries, observer) {
 const navBarFixed = new IntersectionObserver(fixHeader, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navBarHeight}px`,
+  //rootMargin: `-${navBarHeight}px`,
 });
 navBarFixed.observe(header);
 

@@ -37,12 +37,17 @@
         height: 15rem;
       }
       &-author-name {
+        text-align: center;
         text-transform: uppercase;
       }
     }
     &-right {
+      margin-left: 5rem;
       text-align: justify;
       flex: 1;
+      @include media-query(tab-land) {
+        margin: 0;
+      }
     }
   }
 }
