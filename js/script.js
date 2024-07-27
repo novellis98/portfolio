@@ -14,7 +14,6 @@ const contacts = document.querySelector(".footer__social-media");
 const sectionAboutMe = document.querySelector(".about_me");
 const btnPageUp = document.querySelector(".btn-page-up");
 const hamburgerMenu = document.querySelector(".hamburger-menu");
-const background = document.querySelector(".background");
 //sticky header nav when header ends
 const fixHeader = function (entries, observer) {
   const [entry] = entries;
@@ -35,7 +34,6 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-//const richiesta = fetch("https://db-portfolio-1.onrender.com/projects")
 const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
   .then((response) => response.json())
   .then((project) => {
@@ -160,18 +158,7 @@ btnPageUp.addEventListener("click", function () {
 });
 
 //////////////////
-//HAMBURGER MENU
-hamburgerMenu.addEventListener("click", function () {
-  navBar.classList.toggle("open");
-  hamburgerMenu.classList.toggle("open");
-  background.classList.toggle("open");
-  document.body.classList.add("no-scroll");
-  if (navBarLinks || hamburgerMenu & hamburgerMenu.classList.contains("open")) {
-    addEventListener("click", function () {
-      document.body.classList.remove("no-scroll");
-    });
-  }
-});
+
 /// show scroll button to header when header ends
 const revealHamburgerIcon = new IntersectionObserver(
   function (entries, observe) {
@@ -193,11 +180,19 @@ const revealHamburgerIcon = new IntersectionObserver(
 revealHamburgerIcon.observe(header);
 
 ///////////////////////
-//REMOVE BACKGROUND WHEN LINKS ARE CLICKED
+//TOGGLE MENU HAMBURGER
+//
+const toggleMenu = function () {
+  hamburgerMenu.classList.toggle("open");
+  navBar.classList.toggle("open");
+};
+//link click, open menu, set no scroll
 navBarLinks.forEach((link) =>
   link.addEventListener("click", () => {
-    background.classList.toggle("open");
-    navBar.classList.toggle("open");
-    hamburgerMenu.classList.toggle("open");
+    toggleMenu(), document.body.classList.toggle("no-scroll");
   })
 );
+// no scroll, open menu
+hamburgerMenu.addEventListener("click", () => {
+  toggleMenu(), document.body.classList.toggle("no-scroll");
+});

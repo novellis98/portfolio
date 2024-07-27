@@ -2,7 +2,7 @@
   background-image: linear-gradient(
     to bottom,
     var(--color-grey-2),
-    var(--color-beige-1) 50%
+    var(--color-beige-1) 60%
   );
 }
 ////////////////////////
@@ -27,7 +27,6 @@
   }
   &__text {
     line-height: 6rem;
-    text-align: justify;
     &-h3,
     &-h4 {
       text-align: center;

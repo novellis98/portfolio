@@ -70,6 +70,7 @@ body {
   box-sizing: border-box;
   &.no-scroll {
     overflow: hidden;
+    position: fixed;
   }
 }
 footer {
