@@ -17,6 +17,7 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 //sticky header nav when header ends
 const fixHeader = function (entries, observer) {
   const [entry] = entries;
+  console.log(entry);
   if (!entry.isIntersecting) {
     navBar.classList.add("sticky");
   } else {
