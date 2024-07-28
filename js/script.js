@@ -17,7 +17,6 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 //sticky header nav when header ends
 const fixHeader = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) {
     navBar.classList.add("sticky");
   } else {
@@ -38,7 +37,6 @@ navBarFixed.observe(header);
 const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
   .then((response) => response.json())
   .then((project) => {
-    console.log(project);
     project.forEach((item) => {
       const markup = `<figure class="projects__container">
             <img
@@ -161,7 +159,7 @@ btnPageUp.addEventListener("click", function () {
 //////////////////
 
 /// show scroll button to header when header ends
-const revealHamburgerIcon = new IntersectionObserver(
+const revealBtnPageUp = new IntersectionObserver(
   function (entries, observe) {
     const [entry] = entries;
     if (!navBar.classList.contains("open")) {
@@ -178,7 +176,7 @@ const revealHamburgerIcon = new IntersectionObserver(
     threshold: 0,
   }
 );
-revealHamburgerIcon.observe(header);
+revealBtnPageUp.observe(header);
 
 ///////////////////////
 //TOGGLE MENU HAMBURGER
@@ -190,7 +188,7 @@ const toggleMenu = function () {
 //link click, open menu, set no scroll
 navBarLinks.forEach((link) =>
   link.addEventListener("click", () => {
-    toggleMenu(), document.body.classList.toggle("no-scroll");
+    toggleMenu(), document.body.classList.remove("no-scroll");
   })
 );
 // no scroll, open menu
