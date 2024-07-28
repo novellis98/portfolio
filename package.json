@@ -2,13 +2,12 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "portfolio",
-  "main": "dist/main.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     "parcel-start": "parcel src/index.html",
-    "build": "parcel build src/js/index.js"
+    "build": "parcel build src/index.html"
   },
   "author": "Umberto Novellis",
   "license": "ISC",
