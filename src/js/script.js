@@ -1,6 +1,3 @@
-////////////////////////
-//variables
-
 const header = document.querySelector(".header");
 const navBar = document.querySelector(".header__nav");
 const navBarLinks = document.querySelectorAll(".header__menu-links");

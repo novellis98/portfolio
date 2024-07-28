@@ -7,8 +7,8 @@
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "parcel-start": "parcel index.html",
-    "build": "parcel build index.html"
+    "parcel-start": "parcel src/index.html",
+    "build": "parcel build src/js/index.js"
   },
   "author": "Umberto Novellis",
   "license": "ISC",
@@ -19,5 +19,12 @@
     "npm-run-all": "^4.1.5",
     "parcel": "^2.12.0",
     "postcss-cli": "^11.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "dependencies": {
+    "@swc/helpers": "^0.5.12"
   }
 }
