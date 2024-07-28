@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "portfolio",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "devserver": "live-server src",
     "start": "npm-run-all --parallel devserver watch:sass",
     "parcel-start": "parcel src/index.html",
     "build": "parcel build src/index.html"
@@ -12,6 +12,7 @@
   "author": "Umberto Novellis",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
     "autoprefixer": "^10.4.19",
     "concat": "^1.0.3",
     "node-sass": "^9.0.0",
