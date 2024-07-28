@@ -21,7 +21,7 @@
     "postcss-cli": "^11.0.0"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 4 versions",
     "> 1%"
   ],
   "dependencies": {
