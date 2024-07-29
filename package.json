@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "portfolio",
   "scripts": {
+    "prefix": "postcss src/css/style.css --use autoprefixer -o src/css/style.prefix.css",
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "devserver": "live-server src",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -18,6 +19,7 @@
     "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.12.0",
+    "postcss": "^8.4.40",
     "postcss-cli": "^11.0.0"
   },
   "browserslist": [
