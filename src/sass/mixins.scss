@@ -10,13 +10,13 @@
   }
   //<600px
   @if $breakpoint == phone {
-    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     }
   }
   //<750px
   @if $breakpoint == tab-small {
-    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 46.87em) {
+    @media only screen and (max-width: 46.87em) {
       @content;
     }
   }
