@@ -97,7 +97,24 @@ const obsAbout = new IntersectionObserver(revealSection, {
 obsAbout.observe(sectionAboutMe);
 
 //////////////////////////
-//HEADER NAV LINKS SCROLLING TO SECTIONS
+//menu hamburger, toogle opening menu
+const toggleMenu = function () {
+  hamburgerMenu.classList.toggle("open");
+  navBar.classList.toggle("open");
+};
+//link click, close menu, and remove no scroll
+navBarLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    document.body.classList.remove("no-scroll");
+    toggleMenu();
+  })
+);
+// toggle scroll, click menu
+hamburgerMenu.addEventListener("click", () => {
+  toggleMenu();
+
+  document.body.classList.toggle("no-scroll");
+});
 
 //link home scroll
 linkHome.addEventListener("click", function (e) {
@@ -174,21 +191,3 @@ const revealBtnPageUp = new IntersectionObserver(
   }
 );
 revealBtnPageUp.observe(header);
-
-///////////////////////
-//TOGGLE MENU HAMBURGER
-//
-const toggleMenu = function () {
-  hamburgerMenu.classList.toggle("open");
-  navBar.classList.toggle("open");
-};
-//link click, open menu, set no scroll
-navBarLinks.forEach((link) =>
-  link.addEventListener("click", () => {
-    toggleMenu(), document.body.classList.remove("no-scroll");
-  })
-);
-// no scroll, open menu
-hamburgerMenu.addEventListener("click", () => {
-  toggleMenu(), document.body.classList.toggle("no-scroll");
-});
