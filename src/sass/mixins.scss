@@ -4,7 +4,7 @@
 @mixin media-query($breakpoint) {
   //<350px
   @if $breakpoint == phone-small {
-    @media only screen and (pointer: coarse) and (hover: none) and (max-width: 22.43em) {
+    @media only screen and (max-width: 22.43em) {
       @content;
     }
   }
