@@ -41,6 +41,7 @@
 //////////////////////////
 /// SKILLS
 .skills {
+  overflow-x: hidden;
   &__container {
     margin: 10rem;
     display: grid;
@@ -48,6 +49,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10rem;
+
     &__figure {
       margin: 0 auto;
       opacity: 0;

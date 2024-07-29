@@ -7,7 +7,7 @@
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
     "devserver": "live-server src",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "parcel-start": "parcel src/index.html",
+    "parcel-start": "  parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "author": "Umberto Novellis",

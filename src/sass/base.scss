@@ -71,6 +71,7 @@ body {
   background-color: var(--color-grey-2);
   font-size: 2.2rem;
   box-sizing: border-box;
+  overflow-x: hidden;
   &.no-scroll {
     overflow: hidden;
     position: fixed;
