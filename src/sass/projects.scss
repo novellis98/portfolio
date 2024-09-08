@@ -58,11 +58,15 @@
     }
     &-caption {
       height: 5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       color: #fff;
       text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    &-description {
+      text-align: center;
+      color: #fff;
+      margin-top: 0;
     }
   }
 }

@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.prefix.css" />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
     <script
       src="https://kit.fontawesome.com/6f0bc2a762.js"
       crossorigin="anonymous"
@@ -21,12 +21,15 @@
     <header class="header">
       <div class="header__logo">
         <a href="#"
-          ><img src="img/logo-nero.png" alt="logo" class="header__logo-photo"
+          ><img
+            src="/images/logo-nero.ico"
+            alt="logo"
+            class="header__logo-photo"
         /></a>
       </div>
       <div class="header__author">
         <img
-          src="img/profile-photo.jpg"
+          src="/images/profile-photo.jpg"
           alt="author photo"
           class="header__author-photo"
         />
@@ -195,13 +198,14 @@
         <div class="projects">
           <!-- <figure class="projects__container">
             <img
-              src="img/coding.jpg"
+              src="/images/profile-photo.jpg"
               alt="portfolio"
               class="projects__container-image"
             />
             <a href="#" class="projects__container-link">Go to website</a>
-            <figcaption class="projects__container-caption">
-              Portfolio
+            <figcaption>
+              <p class="projects__container-caption">Portfolio</p>
+              <p class="projects__container-description">Portfolio</p>
             </figcaption>
           </figure> -->
         </div>
@@ -211,7 +215,7 @@
         <div class="about_me__container">
           <div class="about_me__container-left">
             <img
-              src="img/profile-photo.jpg"
+              src="/images/profile-photo.jpg"
               alt="author photo"
               class="about_me__container-left-author-photo"
             />
@@ -243,7 +247,11 @@
 
     <footer class="footer">
       <div class="footer__logo">
-        <img src="img/logo-nero.png" alt="logo" class="footer__logo-image" />
+        <img
+          src="/images/logo-nero.png"
+          alt="logo"
+          class="footer__logo-image"
+        />
       </div>
       <div class="footer__social-media">
         <a href="https://www.facebook.com/umberto.novellis?locale=it_IT">
@@ -265,6 +273,6 @@
         &copy; Copyright 2024, Umberto Novellis. All right reserved
       </div>
     </footer>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>

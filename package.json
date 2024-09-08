@@ -1,32 +1,14 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "prefix": "postcss src/css/style.css --use autoprefixer -o src/css/style.prefix.css",
-    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
-    "devserver": "live-server src",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "parcel-start": "  parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "Umberto Novellis",
-  "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.12.0",
-    "autoprefixer": "^10.4.19",
-    "concat": "^1.0.3",
-    "node-sass": "^9.0.0",
-    "npm-run-all": "^4.1.5",
-    "parcel": "^2.12.0",
-    "postcss": "^8.4.40",
-    "postcss-cli": "^11.0.0"
-  },
-  "browserslist": [
-    "last 4 versions",
-    "> 1%"
-  ],
-  "dependencies": {
-    "@swc/helpers": "^0.5.12"
+    "vite": "^5.4.1"
   }
 }

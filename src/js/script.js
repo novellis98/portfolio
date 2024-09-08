@@ -31,7 +31,7 @@ navBarFixed.observe(header);
 
 //PROJECT CONTAINER
 //request json container
-const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
+const richiesta = fetch("/data/db.json")
   .then((response) => response.json())
   .then((project) => {
     project.forEach((item) => {
@@ -42,8 +42,9 @@ const richiesta = fetch("https://db-portfolio-rj6m.onrender.com/projects")
               class="projects__container-image"
             />
             <a href="${item.url}" class="projects__container-link">Go to website</a>
-            <figcaption class="projects__container-caption">
-             ${item.nome}
+              <figcaption>
+              <p class="projects__container-caption">${item.nome}</p>
+              <p class="projects__container-description">${item.description}</p>
             </figcaption>
           </figure>`;
       const sectionProjects = document.querySelector(".projects");

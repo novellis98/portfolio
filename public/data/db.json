@@ -1,0 +1,8 @@
+[
+  {
+    "nome": "Reactive Pizza",
+    "screenshot": "/images/reactive-pizza.png",
+    "description": "Sviluppata un’app demo per una pizzeria che consente agli utenti di visualizzare il menu, prenotare e ordinare online.",
+    "url": "https://reactivepizza.netlify.app"
+  }
+]
